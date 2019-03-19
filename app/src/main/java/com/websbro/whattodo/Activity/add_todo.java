@@ -53,6 +53,7 @@ public class add_todo extends AppCompatActivity {
         if(title.length()>0 && description.length()>0 && date.length()>0){
             todoDatabase.execSQL("insert into mytodo values('"+title+"','"+description+"','"+date+"');");
             Intent intent = new Intent(this,MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
 
 

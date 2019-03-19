@@ -97,6 +97,7 @@ public class EditTask extends AppCompatActivity {
 
     public void changeActivity(){
         Intent intent1 = new Intent(EditTask.this,MainActivity.class);
+        intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent1);
     }
 
